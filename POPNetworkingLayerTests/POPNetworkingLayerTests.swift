@@ -11,9 +11,7 @@ import XCTest
 
 class POPNetworkingLayerTests: XCTestCase {
     
-    struct service: Requester {
-        static var queue: OperationQueue = OperationQueue()
-    }
+    struct service: Requester { }
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

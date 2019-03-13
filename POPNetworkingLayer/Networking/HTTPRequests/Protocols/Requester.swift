@@ -10,7 +10,6 @@ import Foundation
 //import RealmSwift
 
 public protocol Requester {
-    static var queue: OperationQueue {get}
     static func execute<T: Codable>(ofType: T.Type, request : Request,
                         completion: @escaping
         (_ result: HTTPResult<T?,HTTPCallErrorType<Error>?>) -> Void)

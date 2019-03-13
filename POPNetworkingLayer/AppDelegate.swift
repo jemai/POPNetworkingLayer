@@ -13,9 +13,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    struct service: Requester {}
+    
+    func doSomething() {
+        // we are going to call this test api
+        let request = HTTPRequest(url: "http://ip.jsontest.com/")
+        
+        service.execute(ofType: ResponseMapper.self, request: request) { (result) in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let object):
+                print(object)
+            }
+        }
+    }
+    // the response type
+    struct ResponseMapper: Codable {
+        let ip: String
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        doSomething()
         return true
     }
 
