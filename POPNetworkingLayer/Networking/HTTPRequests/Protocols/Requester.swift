@@ -13,14 +13,14 @@ public protocol Requester {
     static var queue: OperationQueue {get}
     static func execute<T: Codable>(ofType: T.Type, request : Request,
                         completion: @escaping
-        (_ result: HTTPResult<T?,HTTPCallErrorType<Error,Any>?>) -> Void)
+        (_ result: HTTPResult<T?,HTTPCallErrorType<Error>?>) -> Void)
 }
 
 extension Requester {
     
     public static func execute<T: Codable>(ofType: T.Type, request : Request,
                                            completion: @escaping
-        (_ result: HTTPResult<T?,HTTPCallErrorType<Error,Any>?>) -> Void) {
+        (_ result: HTTPResult<T?,HTTPCallErrorType<Error>?>) -> Void) {
 
         if let httpRequest = createRequest(from: request) {
 
@@ -35,7 +35,7 @@ extension Requester {
                                 completion(HTTPResult.success(object))
                                 return
                             } catch let error {
-                                completion(HTTPResult.failure(HTTPCallErrorType.responseError(error)))
+                                completion(HTTPResult.failure(HTTPCallErrorType.mappingError(error)))
                                 return
                             }
                         }

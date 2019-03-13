@@ -8,9 +8,9 @@
 
 import Foundation
 
-public enum HTTPCallErrorType<T,E> {
+public enum HTTPCallErrorType<E> {
     case urlError
     case dataError
-    case responseError(T)
-    case mappedError(E)
+    case responseError(E)
+    case mappingError(E)
 }

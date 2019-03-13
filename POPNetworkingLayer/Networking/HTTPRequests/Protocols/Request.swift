@@ -34,6 +34,10 @@ public struct HTTPRequest: Request {
     public var bodyParams: BodyParams? = nil
     public var headers:    Headers? = ["Content-Type" : "application/json"]
 
+    public init(url: String) {
+        self.urlString = url
+    }
+    
     public init(url: String, headers: Headers?, bodyParams: BodyParams?, method: HTTPMethod, params: Params? = nil) {
         self.urlString = url
         self.method = method
