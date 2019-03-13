@@ -10,7 +10,11 @@ import XCTest
 @testable import POPNetworkingLayer
 
 class POPNetworkingLayerTests: XCTestCase {
-
+    
+    struct service: Requester {
+        static var queue: OperationQueue = OperationQueue()
+    }
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -19,16 +23,40 @@ class POPNetworkingLayerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testService() {
+        
     }
 
     func testPerformanceExample() {
-        // This is an example of a performance test case.
+        // preparing the request
+        let request = HTTPRequest(url: "http://ip.jsontest.com/")
+        //
+        weak var expect = expectation(description: "Service Call Expectation")
+        //
         self.measure {
-            // Put the code you want to measure the time of here.
+            // loading the object from remote
+            service.execute(ofType: ResponseMapper.self, request: request) { (result) in
+                switch result {
+                case .failure(let error):
+                    XCTFail("Error happened: \(error.debugDescription)")
+                case .success( _):
+                    XCTAssert(true)
+                }
+                expect?.fulfill()
+                expect = nil
+            }
+        }
+        
+        waitForExpectations(timeout: 5) { error in
+            if let error = error {
+                XCTFail("Timeout errored: \(error)")
+            }
         }
     }
 
+}
+
+
+struct ResponseMapper: Codable {
+    let ip: String
 }
