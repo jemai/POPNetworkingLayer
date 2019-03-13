@@ -14,6 +14,12 @@
 		E931120222393FEF00DEEBEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E931120022393FEF00DEEBEB /* LaunchScreen.storyboard */; };
 		E931120D22393FEF00DEEBEB /* POPNetworkingLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931120C22393FEF00DEEBEB /* POPNetworkingLayerTests.swift */; };
 		E931121822393FEF00DEEBEB /* POPNetworkingLayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931121722393FEF00DEEBEB /* POPNetworkingLayerUITests.swift */; };
+		E93112312239401700DEEBEB /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93112282239401700DEEBEB /* ResultType.swift */; };
+		E93112322239401700DEEBEB /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93112292239401700DEEBEB /* HTTPMethod.swift */; };
+		E93112342239401700DEEBEB /* HTTPCallErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931122B2239401700DEEBEB /* HTTPCallErrorType.swift */; };
+		E93112352239401700DEEBEB /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931122D2239401700DEEBEB /* Requester.swift */; };
+		E93112362239401700DEEBEB /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = E931122E2239401700DEEBEB /* Request.swift */; };
+		E93112372239401700DEEBEB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93112302239401700DEEBEB /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		E931121322393FEF00DEEBEB /* POPNetworkingLayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POPNetworkingLayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E931121722393FEF00DEEBEB /* POPNetworkingLayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POPNetworkingLayerUITests.swift; sourceTree = "<group>"; };
 		E931121922393FEF00DEEBEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E93112282239401700DEEBEB /* ResultType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
+		E93112292239401700DEEBEB /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		E931122B2239401700DEEBEB /* HTTPCallErrorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPCallErrorType.swift; sourceTree = "<group>"; };
+		E931122D2239401700DEEBEB /* Requester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
+		E931122E2239401700DEEBEB /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		E93112302239401700DEEBEB /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 		E93111F622393FED00DEEBEB /* POPNetworkingLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E93112252239401700DEEBEB /* Networking */,
 				E93111F722393FED00DEEBEB /* AppDelegate.swift */,
 				E93111F922393FED00DEEBEB /* ViewController.swift */,
 				E93111FB22393FED00DEEBEB /* Main.storyboard */,
@@ -123,6 +136,51 @@
 				E931121922393FEF00DEEBEB /* Info.plist */,
 			);
 			path = POPNetworkingLayerUITests;
+			sourceTree = "<group>";
+		};
+		E93112252239401700DEEBEB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E93112262239401700DEEBEB /* HTTPRequests */,
+				E931122F2239401700DEEBEB /* Reachability */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E93112262239401700DEEBEB /* HTTPRequests */ = {
+			isa = PBXGroup;
+			children = (
+				E93112272239401700DEEBEB /* Enums */,
+				E931122C2239401700DEEBEB /* Protocols */,
+			);
+			path = HTTPRequests;
+			sourceTree = "<group>";
+		};
+		E93112272239401700DEEBEB /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E93112282239401700DEEBEB /* ResultType.swift */,
+				E93112292239401700DEEBEB /* HTTPMethod.swift */,
+				E931122B2239401700DEEBEB /* HTTPCallErrorType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E931122C2239401700DEEBEB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E931122D2239401700DEEBEB /* Requester.swift */,
+				E931122E2239401700DEEBEB /* Request.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E931122F2239401700DEEBEB /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				E93112302239401700DEEBEB /* Reachability.swift */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93112322239401700DEEBEB /* HTTPMethod.swift in Sources */,
+				E93112362239401700DEEBEB /* Request.swift in Sources */,
 				E93111FA22393FED00DEEBEB /* ViewController.swift in Sources */,
+				E93112342239401700DEEBEB /* HTTPCallErrorType.swift in Sources */,
+				E93112312239401700DEEBEB /* ResultType.swift in Sources */,
+				E93112372239401700DEEBEB /* Reachability.swift in Sources */,
+				E93112352239401700DEEBEB /* Requester.swift in Sources */,
 				E93111F822393FED00DEEBEB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
