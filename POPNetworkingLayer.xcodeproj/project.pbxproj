@@ -251,13 +251,16 @@
 				TargetAttributes = {
 					E93111F322393FED00DEEBEB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					E931120722393FEF00DEEBEB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = E93111F322393FED00DEEBEB;
 					};
 					E931121222393FEF00DEEBEB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = E93111F322393FED00DEEBEB;
 					};
 				};
@@ -505,7 +508,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.endios.one.demo.POPNetworkingLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -523,7 +526,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.endios.one.demo.POPNetworkingLayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -543,7 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.endios.one.demo.POPNetworkingLayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POPNetworkingLayer.app/POPNetworkingLayer";
 			};
@@ -564,7 +567,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.endios.one.demo.POPNetworkingLayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/POPNetworkingLayer.app/POPNetworkingLayer";
 			};
@@ -584,7 +587,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.endios.one.demo.POPNetworkingLayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = POPNetworkingLayer;
 			};
@@ -604,7 +607,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.endios.one.demo.POPNetworkingLayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = POPNetworkingLayer;
 			};

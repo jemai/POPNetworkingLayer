@@ -22,9 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         service.execute(ofType: ResponseMapper.self, request: request) { (result) in
             switch result {
             case .failure(let error):
-                print(error)
+                print(error ?? "")
             case .success(let object):
-                print(object)
+                print(object ?? "")
             }
         }
     }

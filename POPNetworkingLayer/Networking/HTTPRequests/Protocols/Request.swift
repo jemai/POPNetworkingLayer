@@ -21,9 +21,9 @@ public protocol Request {
 }
 
 public extension Request {
-    public var method      : HTTPMethod        { return .get }
-    public var bodyParams  : BodyParams?       { return nil }
-    public var headers     : Headers?          { return nil }
+    var method      : HTTPMethod        { return .get }
+    var bodyParams  : BodyParams?       { return nil }
+    var headers     : Headers?          { return nil }
 }
 
 public struct HTTPRequest: Request {

@@ -82,7 +82,7 @@ extension Requester {
 // MARK: - Extensions
 public extension Dictionary {
     var data: Data? {
-        return try? NSKeyedArchiver.archivedData(withRootObject: self, requiringSecureCoding: true)
+        return try? JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
     }
 }
 
